@@ -37,6 +37,7 @@
     direction: ltr;
     font-size: 1.4rem;
     z-index: 10;
+    background-color: #f1e4cd;
 }
 
 .nav {
@@ -81,4 +82,57 @@
     padding: .5rem;
     border-radius: 2rem;
     background-color: #1D232A;
+}
+
+.nav .user-dropMenu {
+    position: absolute;
+    top: 5rem;
+    border-radius: .4rem;
+    font-size: 1rem;
+    width: 13rem;
+    height: 0;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #111827;
+}
+
+.nav .user-dropMenu ul {
+    display: flex;
+    flex-direction: column;
+    padding-block: 1rem;
+    gap: .5rem;
+}
+
+.nav .user-dropMenu li {
+    width: 100%;
+    padding: .4rem ;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    transition: background .15s;
+    /* background-color: #CC8C18; */
+}
+
+.nav .user-dropMenu li:hover {
+    background-color: var(--span);
+}
+
+.nav .user-dropMenu hr {
+    width: 70%;
+    margin: auto;
+    border-top: 1px solid var(--span);
+    opacity: .4;
+}
+
+.nav .user-dropMenu p {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: .3rem .7rem;
+}
+
+.nav .user-dropMenu.active {
+    height: max-content;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* transition: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
 }

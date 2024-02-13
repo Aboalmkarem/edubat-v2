@@ -9,7 +9,7 @@ const Home = () => {
     let ul = useRef()
     let subjects = useRef()
     let isShowMore = false
-    let showEmplyees = true;
+    let showCards = true;
     let [courses, setCourses] = useState( 
         [
             {
@@ -99,7 +99,7 @@ const Home = () => {
             <h2>اشتراكاتك</h2>
             <h3>كورساتي</h3>
             <div className='cards courses'>
-                {showEmplyees ? ( 
+                {showCards ? ( 
                     <>
                         {courses.map((course) => {
                             return(
@@ -122,7 +122,7 @@ const Home = () => {
             </div>
             <h3>كورسات اخري</h3>
             <div className='cards other-courses'>
-                {showEmplyees ? ( 
+                {showCards ? ( 
                     <>
                         {otherCourses.map((course) => {
                             return(

@@ -2,9 +2,14 @@ import './navbar.css'
 import logo from '../../Assets/logo1.png'
 import { Link, NavLink } from 'react-router-dom';
 import { FaBars, FaBell, FaHeadphones, FaHome, FaRing, FaSearch, FaUser, FaWallet } from "react-icons/fa";
+import { useRef } from 'react';
 
 const Navbar = ({isChecked, handleChange}) => { 
 
+    let drop = useRef()
+    const dropation = () => {
+        drop.current.classList.toggle('active')
+    }
 
     return (
         <div className='navbar'>
@@ -33,7 +38,21 @@ const Navbar = ({isChecked, handleChange}) => {
                         </div>
                     </Link>
                     <FaBell></FaBell>
-                    <FaUser></FaUser>
+                    <FaUser onClick={dropation}></FaUser>
+                    <div className='user-dropMenu' ref={drop}>
+                        <ul>
+                            <li><Link to='/edubat-v2'>الصفحة الرئيسية</Link></li>
+                            <hr></hr>
+                            <p>اهلا محمد</p>
+                            <li><Link to='/edubat-v2'>منتدي الطلبة</Link></li>
+                            <li><Link to='/edubat-v2'>شحن كود السنتر</Link></li>
+                            <li><Link to='/edubat-v2'>حسابي</Link></li>
+                            <li><Link to='/edubat-v2'>محفظتي</Link></li>
+                            <li><Link to='/edubat-v2'>موادي</Link></li>
+                            <li><Link to='/edubat-v2'>كورساتي</Link></li>
+                            <li><Link to='/edubat-v2'>تسجيل خروج</Link></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
