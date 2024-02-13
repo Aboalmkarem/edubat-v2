@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/edubat-v2/static/css/main.f855e6bc.css",
-    "main.js": "/edubat-v2/static/js/main.220f204c.js",
-    "static/js/592.c02173a4.chunk.js": "/edubat-v2/static/js/592.c02173a4.chunk.js",
-    "static/media/logo.svg": "/edubat-v2/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/edubat-v2/index.html",
-    "main.f855e6bc.css.map": "/edubat-v2/static/css/main.f855e6bc.css.map",
-    "main.220f204c.js.map": "/edubat-v2/static/js/main.220f204c.js.map",
-    "592.c02173a4.chunk.js.map": "/edubat-v2/static/js/592.c02173a4.chunk.js.map"
+    "main.css": "/edubat/static/css/main.78182ce0.css",
+    "main.js": "/edubat/static/js/main.9121c282.js",
+    "static/js/592.c02173a4.chunk.js": "/edubat/static/js/592.c02173a4.chunk.js",
+    "static/media/teacher1.png": "/edubat/static/media/teacher1.63987cd2070865c4010c.png",
+    "index.html": "/edubat/index.html",
+    "main.78182ce0.css.map": "/edubat/static/css/main.78182ce0.css.map",
+    "main.9121c282.js.map": "/edubat/static/js/main.9121c282.js.map",
+    "592.c02173a4.chunk.js.map": "/edubat/static/js/592.c02173a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.220f204c.js"
+    "static/css/main.78182ce0.css",
+    "static/js/main.9121c282.js"
   ]
 }
