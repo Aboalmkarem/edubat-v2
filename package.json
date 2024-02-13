@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Aboalmkarem.github.io/edubat-v2",
+  "homepage": "https://Aboalmkarem.github.io/edubat",
   "name": "edubat-v2",
   "version": "0.1.0",
   "private": true,
@@ -9,7 +9,10 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "react-router-dom": "^6.22.0",
     "react-scripts": "5.0.1",
+    "use-local-storage": "^3.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -39,6 +42,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "daisyui": "^4.7.0",
+    "gh-pages": "^6.1.1",
+    "tailwindcss": "^3.4.1"
   }
 }

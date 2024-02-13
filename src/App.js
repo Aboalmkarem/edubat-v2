@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import useLocalStorage from 'use-local-storage';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Navbar from './componants/navbar/navbar'
+import Home from './componants/home/home'
+import Footer from './componants/footer/footer'
 
 function App() {
+
+  const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [isDark, setIsDark] = useLocalStorage("isDark", preference);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" data-theme={isDark ? "dark" : "light"}>
+      <BrowserRouter>
+        <Navbar isChecked={isDark} handleChange={() => {setIsDark(!isDark)}}></Navbar>
+        <Routes>
+          <Route path='/edubat' element={<Home></Home>}></Route>
+
+        </Routes>
+        <Footer></Footer>
+      </BrowserRouter>
     </div>
   );
 }

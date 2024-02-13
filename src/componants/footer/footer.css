@@ -1,0 +1,28 @@
+footer {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    background-color: var(--span);
+}
+
+footer div img {
+    width: 15rem;
+}
+
+footer .hotNum {
+    font-size: 2rem;
+    background-color: var(--iBack);
+}
+
+footer .social.midea {
+    display: flex;
+    gap: 2.5rem;
+    font-size: 3.5rem;
+}
+
+footer p {
+    padding-top: 3rem;
+}

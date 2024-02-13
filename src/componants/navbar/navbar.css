@@ -1,0 +1,84 @@
+:root {
+    --main: #CC8C18;
+    --span: #11baf0;
+    --card: #e7f8fd;
+    --backgroundA: linear-gradient(rgba(255, 255, 255, 0.6), rgb(255, 255, 255));
+    --mainDark: #313538;
+    --text: #111827;
+    --iBack: #FAF3E7;
+}
+
+[data-theme="dark"] {
+    --main: #282c34;
+    --card: #111827;
+    --backgroundA: linear-gradient(#1d232a98, #1D232A);
+    --text: #fff;
+    --iBack: #f1e4cd;
+}
+
+/* .theme {
+    position: fixed;
+    top: 1.7rem;
+    right: 1.5rem;
+    z-index: 11;
+}
+
+.theme .sun, .theme .moon {
+    color: var(--iBack);
+} */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6rem;
+    backdrop-filter: blur(7px);
+    display: flex;
+    direction: ltr;
+    font-size: 1.4rem;
+    z-index: 10;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    gap: 1rem;
+    
+}
+
+.nav img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav .float {
+    display: flex;
+    flex-grow: 1;
+    justify-content: end;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.nav .wallet {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: .5rem;
+    width: max-content;
+    padding-left: .5rem;
+    border-radius: 2rem;
+    background-color: cadetblue;
+}
+
+.nav .wallet .w-icon {
+    display: flex;
+    justify-content: center;
+    padding: .5rem;
+    border-radius: 2rem;
+    background-color: #1D232A;
+}
