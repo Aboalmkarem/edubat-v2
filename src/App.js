@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter>
         <Navbar isChecked={isDark} handleChange={() => {setIsDark(!isDark)}}></Navbar>
         <Routes>
-          <Route path='/edubat' element={<Home></Home>}></Route>
+          <Route path='/edubat-v2' element={<Home></Home>}></Route>
 
         </Routes>
         <Footer></Footer>
