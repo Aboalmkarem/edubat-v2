@@ -28,7 +28,7 @@ const Navbar = ({isChecked, handleChange}) => {
                     </div>
                 </div>
                 <div className='float'>
-                    <FaSearch></FaSearch>
+                    <FaSearch className='pointer'></FaSearch>
                     <Link to='./wallet'>
                         <div className='wallet'>
                             <p>0 جنيه</p>
@@ -37,20 +37,20 @@ const Navbar = ({isChecked, handleChange}) => {
                             </span>
                         </div>
                     </Link>
-                    <FaBell></FaBell>
-                    <FaUser onClick={dropation}></FaUser>
+                    <FaBell className='pointer'></FaBell>
+                    <FaUser className='pointer' onClick={dropation}></FaUser>
                     <div className='user-dropMenu' ref={drop}>
                         <ul>
-                            <li><Link to='/edubat-v2'>الصفحة الرئيسية</Link></li>
+                            <li onClick={dropation}><Link to='/edubat-v2'>الصفحة الرئيسية</Link></li>
                             <hr></hr>
                             <p>اهلا محمد</p>
-                            <li><Link to='/edubat-v2'>منتدي الطلبة</Link></li>
-                            <li><Link to='/edubat-v2'>شحن كود السنتر</Link></li>
-                            <li><Link to='/edubat-v2'>حسابي</Link></li>
-                            <li><Link to='/edubat-v2'>محفظتي</Link></li>
-                            <li><Link to='/edubat-v2'>موادي</Link></li>
-                            <li><Link to='/edubat-v2'>كورساتي</Link></li>
-                            <li><Link to='/edubat-v2'>تسجيل خروج</Link></li>
+                            <Link to='/edubat-v2'><li onClick={dropation}>منتدي الطلبة</li></Link>
+                            <Link to='/edubat-v2'><li onClick={dropation}>شحن كود السنتر</li></Link>
+                            <Link to='/myProfile/user'><li onClick={dropation}>حسابي</li></Link>
+                            <Link to='/edubat-v2'><li onClick={dropation}>محفظتي</li></Link>
+                            <Link to='/edubat-v2'><li onClick={dropation}>موادي</li></Link>
+                            <Link to='/edubat-v2'><li onClick={dropation}>كورساتي</li></Link>
+                            <Link to='/edubat-v2'><li onClick={dropation}>تسجيل خروج</li></Link>
                         </ul>
                     </div>
                 </div>

@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './componants/navbar/navbar'
 import Home from './componants/home/home'
 import Footer from './componants/footer/footer'
+import MyProfile from './componants/my-profile/myProfile'
+import User from './componants/my-profile/profile-pages/user/user';
 
 function App() {
 
@@ -15,8 +17,10 @@ function App() {
       <BrowserRouter>
         <Navbar isChecked={isDark} handleChange={() => {setIsDark(!isDark)}}></Navbar>
         <Routes>
-          <Route path='/edubat-v2' element={<Home></Home>}></Route>
-
+          <Route path='/edubat-v2' element={<Home></Home>} />
+          <Route path='/myProfile' element={<MyProfile></MyProfile>}>
+            <Route path='user' element={<User></User>}></Route>
+          </Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

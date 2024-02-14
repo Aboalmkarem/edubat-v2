@@ -146,7 +146,7 @@ const Home = () => {
             <hr id='hr2'></hr>
             <div className='to-account'>
                 <h6>اعرف تفاصيل اكتر عن حسابك</h6>
-                <Link to='/profile'><button>ملفك الشخصي</button></Link>
+                <Link to='/my-profile'><button>ملفك الشخصي</button></Link>
             </div>
             <h1>مواد اديوبات</h1>
             <h4>الصف الثالث الثانوي</h4>
