@@ -29,7 +29,7 @@ const Navbar = ({isChecked, handleChange}) => {
                 </div>
                 <div className='float'>
                     <FaSearch className='pointer'></FaSearch>
-                    <Link to='./wallet'>
+                    <Link to='/myProfile/wallet'>
                         <div className='wallet'>
                             <p>0 جنيه</p>
                             <span  className='w-icon'>
@@ -45,11 +45,11 @@ const Navbar = ({isChecked, handleChange}) => {
                             <hr></hr>
                             <p>اهلا محمد</p>
                             <Link to='/edubat-v2'><li onClick={dropation}>منتدي الطلبة</li></Link>
-                            <Link to='/edubat-v2'><li onClick={dropation}>شحن كود السنتر</li></Link>
+                            <Link to='/myProfile/code-charge'><li onClick={dropation}>شحن كود السنتر</li></Link>
                             <Link to='/myProfile/user'><li onClick={dropation}>حسابي</li></Link>
-                            <Link to='/edubat-v2'><li onClick={dropation}>محفظتي</li></Link>
-                            <Link to='/edubat-v2'><li onClick={dropation}>موادي</li></Link>
-                            <Link to='/edubat-v2'><li onClick={dropation}>كورساتي</li></Link>
+                            <Link to='/myProfile/wallet'><li onClick={dropation}>محفظتي</li></Link>
+                            <Link to='/myProfile/courses'><li onClick={dropation}>كورساتي</li></Link>
+                            <Link to='/edubat-v2'><li onClick={dropation}>كورساتي الاخري</li></Link>
                             <Link to='/edubat-v2'><li onClick={dropation}>تسجيل خروج</li></Link>
                         </ul>
                     </div>

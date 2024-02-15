@@ -6,6 +6,10 @@ import Home from './componants/home/home'
 import Footer from './componants/footer/footer'
 import MyProfile from './componants/my-profile/myProfile'
 import User from './componants/my-profile/profile-pages/user/user';
+import CCharge from './componants/my-profile/profile-pages/code-charge/cCharge';
+import CCourses from './componants/my-profile/profile-pages/code-courses/cCourses';
+import Wallet from './componants/my-profile/profile-pages/wallet/wallet';
+import Courses from './componants/my-profile/profile-pages/courses/courses';
 
 function App() {
 
@@ -20,6 +24,10 @@ function App() {
           <Route path='/edubat-v2' element={<Home></Home>} />
           <Route path='/myProfile' element={<MyProfile></MyProfile>}>
             <Route path='user' element={<User></User>}></Route>
+            <Route path='code-charge' element={<CCharge></CCharge>}></Route>
+            <Route path='code-courses' element={<CCourses></CCourses>}></Route>
+            <Route path='wallet' element={<Wallet></Wallet>}></Route>
+            <Route path='courses' element={<Courses></Courses>}></Route>
           </Route>
         </Routes>
         <Footer></Footer>

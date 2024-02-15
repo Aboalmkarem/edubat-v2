@@ -110,7 +110,6 @@
     justify-content: end;
     align-items: center;
     transition: background .15s;
-    /* background-color: #CC8C18; */
 }
 
 .nav .user-dropMenu li:hover {
@@ -132,9 +131,7 @@
 }
 
 .nav .user-dropMenu.active {
-    height: max-content;
-    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    /* transition: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+    height: 46.7vh;
 }
 
 .pointer {
