@@ -7,7 +7,8 @@
     border-radius: .5rem;
     display: flex;
     flex-direction: column;
-    background-color: var(--card);
+    background-color: var(--card2);
+    color: var(--text);
 }
 
 .my-profile .head {
@@ -62,7 +63,7 @@
 }
 
 .my-profile .profile-content .slidebar .active {
-    color: var(--text);
+    color: var(--textfixed);
     background-color: var(--span);
     border-radius: .4rem;
 }

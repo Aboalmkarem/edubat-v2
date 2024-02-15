@@ -44,13 +44,13 @@ const Navbar = ({isChecked, handleChange}) => {
                             <li onClick={dropation}><Link to='/edubat-v2'>الصفحة الرئيسية</Link></li>
                             <hr></hr>
                             <p>اهلا محمد</p>
-                            <Link to='/edubat-v2'><li onClick={dropation}>منتدي الطلبة</li></Link>
+                            <Link to='/'><li onClick={dropation}>منتدي الطلبة</li></Link>
                             <Link to='/myProfile/code-charge'><li onClick={dropation}>شحن كود السنتر</li></Link>
                             <Link to='/myProfile/user'><li onClick={dropation}>حسابي</li></Link>
                             <Link to='/myProfile/wallet'><li onClick={dropation}>محفظتي</li></Link>
                             <Link to='/myProfile/courses'><li onClick={dropation}>كورساتي</li></Link>
-                            <Link to='/edubat-v2'><li onClick={dropation}>كورساتي الاخري</li></Link>
-                            <Link to='/edubat-v2'><li onClick={dropation}>تسجيل خروج</li></Link>
+                            <Link to='/myProfile/other-courses'><li onClick={dropation}>كورساتي الاخري</li></Link>
+                            <Link to='/'><li onClick={dropation}>تسجيل خروج</li></Link>
                         </ul>
                     </div>
                 </div>

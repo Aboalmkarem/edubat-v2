@@ -28,6 +28,13 @@ function App() {
             <Route path='code-courses' element={<CCourses></CCourses>}></Route>
             <Route path='wallet' element={<Wallet></Wallet>}></Route>
             <Route path='courses' element={<Courses></Courses>}></Route>
+            <Route path='other-courses' element={<Courses></Courses>}></Route>
+            <Route path='login-date' element={<Courses></Courses>}></Route>
+            <Route path='video-views' element={<Courses></Courses>}></Route>
+            <Route path='invoices' element={<Courses></Courses>}></Route>
+            <Route path='subscriptions' element={<Courses></Courses>}></Route>
+            <Route path='exam-resultes' element={<Courses></Courses>}></Route>
+            <Route path='homework-resultes' element={<Courses></Courses>}></Route>
           </Route>
         </Routes>
         <Footer></Footer>

@@ -27,13 +27,13 @@ const MyProfile = () => {
                         <NavLink to='code-courses'><li>محاضرات واكواد السنتر</li></NavLink>
                         <NavLink to='wallet'><li>محفظتي</li></NavLink>
                         <NavLink to='courses'><li>كورساتي</li></NavLink>
-                        <NavLink to='/'><li>كورساتي الاخري</li></NavLink>
-                        <NavLink to='/'><li>الامان وتاريخ تسجيل الدخول</li></NavLink>
-                        <NavLink to='/'><li>تفاصيل المشاهدات</li></NavLink>
-                        <NavLink to='/'><li>الفواتير</li></NavLink>
-                        <NavLink to='/'><li>الاشتراكات</li></NavLink>
-                        <NavLink to='/'><li>نتائج الامتحانات</li></NavLink>
-                        <NavLink to='/'><li>نتائج الواجب</li></NavLink>
+                        <NavLink to='other-courses'><li>كورساتي الاخري</li></NavLink>
+                        <NavLink to='login-date'><li>الامان وتاريخ تسجيل الدخول</li></NavLink>
+                        <NavLink to='video-views'><li>تفاصيل المشاهدات</li></NavLink>
+                        <NavLink to='invoices'><li>الفواتير</li></NavLink>
+                        <NavLink to='subscriptions'><li>الاشتراكات</li></NavLink>
+                        <NavLink to='exam-resultes'><li>نتائج الامتحانات</li></NavLink>
+                        <NavLink to='homework-resultes'><li>نتائج الواجب</li></NavLink>
                     </ul>
                 </div>
                 <div className='pages-div'>
@@ -43,6 +43,13 @@ const MyProfile = () => {
                         <Route path='code-courses' element={<CCourses></CCourses>}></Route>
                         <Route path='wallet' element={<Wallet></Wallet>}></Route>
                         <Route path='courses' element={<Courses></Courses>}></Route>
+                        <Route path='other-courses' element={<Courses></Courses>}></Route>
+                        <Route path='login-date' element={<Courses></Courses>}></Route>
+                        <Route path='video-views' element={<Courses></Courses>}></Route>
+                        <Route path='invoices' element={<Courses></Courses>}></Route>
+                        <Route path='subscriptions' element={<Courses></Courses>}></Route>
+                        <Route path='exam-resultes' element={<Courses></Courses>}></Route>
+                        <Route path='homework-resultes' element={<Courses></Courses>}></Route>
                     </Routes>
                 </div>
             </div>

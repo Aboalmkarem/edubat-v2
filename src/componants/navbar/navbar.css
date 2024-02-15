@@ -1,19 +1,26 @@
 :root {
-    --main: #CC8C18;
     --span: #11baf0;
+    --span2: #64748B; 
+    --main: #fcfcfc;
     --card: #e7f8fd;
-    --backgroundA: linear-gradient(rgba(255, 255, 255, 0.6), rgb(255, 255, 255));
+    --card2: #F3F4F6;
+    --text: #141c2dee;
+    --text2: #A6ADBB;
+    --textfixed: #ffffffeb;
+    --lightBack: #f2f2f2f6;
+    --hover: #D1D5DB;
     --mainDark: #313538;
-    --text: #111827;
-    --iBack: #FAF3E7;
+    --backgroundA: linear-gradient(rgba(255, 255, 255, 0.6), rgb(255, 255, 255));
 }
 
 [data-theme="dark"] {
-    --main: #282c34;
+    --main: #080C14;
     --card: #111827;
+    --card2: #111827;
+    --text: #ffffffeb;
+    --lightBack: #111827;
+    --hover: #1F2937;
     --backgroundA: linear-gradient(#1d232a98, #1D232A);
-    --text: #fff;
-    --iBack: #f1e4cd;
 }
 
 /* .theme {
@@ -37,7 +44,8 @@
     direction: ltr;
     font-size: 1.4rem;
     z-index: 10;
-    background-color: #f1e4cd;
+    background-color: var(--main);
+    color: var(--text);
 }
 
 .nav {
@@ -73,7 +81,8 @@
     width: max-content;
     padding-left: .5rem;
     border-radius: 2rem;
-    background-color: cadetblue;
+    background-color: var(--span);
+    color: var(--textfixed);
 }
 
 .nav .wallet .w-icon {
@@ -81,7 +90,7 @@
     justify-content: center;
     padding: .5rem;
     border-radius: 2rem;
-    background-color: #1D232A;
+    background-color: var(--span2);
 }
 
 .nav .user-dropMenu {
@@ -93,7 +102,7 @@
     height: 0;
     overflow: hidden;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    background-color: #111827;
+    background-color: var(--lightBack);
 }
 
 .nav .user-dropMenu ul {
@@ -113,7 +122,7 @@
 }
 
 .nav .user-dropMenu li:hover {
-    background-color: var(--span);
+    background-color: var(--hover);
 }
 
 .nav .user-dropMenu hr {

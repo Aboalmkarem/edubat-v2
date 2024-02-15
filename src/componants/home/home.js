@@ -6,6 +6,7 @@ import teacher from '../../Assets/teacher1.png'
 
 const Home = () => {
     
+    let showBtn = useRef()
     let ul = useRef()
     let subjects = useRef()
     let isShowMore = false
@@ -82,13 +83,15 @@ const Home = () => {
     function show() {
         if (isShowMore) {
             isShowMore = false;
-            console.log(isShowMore)
+            // console.log(isShowMore)
+            showBtn.current.innerHTML= 'عرض المزيد'
             ul.current.style.height = '12rem'
             subjects.current.style.height = 'unset'
             return
         } if (!isShowMore) {
             isShowMore = true
-            console.log(isShowMore)
+            // console.log(isShowMore)
+            showBtn.current.innerHTML= 'اخفاء'
             ul.current.style.height = 'max-content'
             subjects.current.style.height = 'max-content'
         }
@@ -146,7 +149,7 @@ const Home = () => {
             <hr id='hr2'></hr>
             <div className='to-account'>
                 <h6>اعرف تفاصيل اكتر عن حسابك</h6>
-                <Link to='/my-profile'><button>ملفك الشخصي</button></Link>
+                <Link to='/myProfile/user'><button>ملفك الشخصي</button></Link>
             </div>
             <h1>مواد اديوبات</h1>
             <h4>الصف الثالث الثانوي</h4>
@@ -166,7 +169,7 @@ const Home = () => {
                     <li><Link to='/'>الكيمياء</Link></li>
                     <li><Link to='/'>اللغة الايطالية</Link></li>
                 </ul>
-                <button onClick={show}>عرض المزيد</button>
+                <button ref={showBtn} onClick={show}>عرض المزيد</button>
             </div>
             <h2 id='h2'>اختار مدرسك</h2>
             <select>
