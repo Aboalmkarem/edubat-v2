@@ -56,7 +56,7 @@ const Navbar = ({isChecked, handleChange}) => {
                     <FaUser className='pointer' onClick={() => {setOpen(!open)}}></FaUser>
                     <div className={`user-dropMenu ${open? 'active': ''}`} ref={drop}>
                         <ul>
-                            <li onClick={() => {setOpen(!open)}}><Link to='/edubat-v2'>الصفحة الرئيسية</Link></li>
+                        <Link to='/edubat-v2'><li onClick={() => {setOpen(!open)}}>الصفحة الرئيسية</li></Link>
                             <hr></hr>
                             <p>اهلا محمد</p>
                             <Link to='/'><li onClick={() => {setOpen(!open)}}>منتدي الطلبة</li></Link>
