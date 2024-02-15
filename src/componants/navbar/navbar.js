@@ -2,14 +2,28 @@ import './navbar.css'
 import logo from '../../Assets/logo1.png'
 import { Link, NavLink } from 'react-router-dom';
 import { FaBars, FaBell, FaHeadphones, FaHome, FaRing, FaSearch, FaUser, FaWallet } from "react-icons/fa";
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const Navbar = ({isChecked, handleChange}) => { 
 
+
+    const [open, setOpen] = useState(false)
+    const [open2, setOpen2] = useState(false)
     let drop = useRef()
-    const dropation = () => {
-        drop.current.classList.toggle('active')
-    }
+    let drop2 = useRef()
+
+
+    useEffect(() => {
+        let handle = (e) => {
+            if (!drop.current.contains(e.target)) {
+                setOpen(false)
+            }
+            if (!drop2.current.contains(e.target)) {
+                setOpen2(false)
+            }
+        }
+        document.addEventListener('mousedown', handle)
+    })
 
     return (
         <div className='navbar'>
@@ -37,20 +51,21 @@ const Navbar = ({isChecked, handleChange}) => {
                             </span>
                         </div>
                     </Link>
-                    <FaBell className='pointer'></FaBell>
-                    <FaUser className='pointer' onClick={dropation}></FaUser>
-                    <div className='user-dropMenu' ref={drop}>
+                    <FaBell className='pointer' onClick={() => {setOpen2(!open2)}}></FaBell>
+                    <div className={`notifications ${open2? 'active': ''}`} ref={drop2}>لا توجد لديك اشعارات</div>
+                    <FaUser className='pointer' onClick={() => {setOpen(!open)}}></FaUser>
+                    <div className={`user-dropMenu ${open? 'active': ''}`} ref={drop}>
                         <ul>
-                            <li onClick={dropation}><Link to='/edubat-v2'>الصفحة الرئيسية</Link></li>
+                            <li onClick={() => {setOpen(!open)}}><Link to='/edubat-v2'>الصفحة الرئيسية</Link></li>
                             <hr></hr>
                             <p>اهلا محمد</p>
-                            <Link to='/'><li onClick={dropation}>منتدي الطلبة</li></Link>
-                            <Link to='/myProfile/code-charge'><li onClick={dropation}>شحن كود السنتر</li></Link>
-                            <Link to='/myProfile/user'><li onClick={dropation}>حسابي</li></Link>
-                            <Link to='/myProfile/wallet'><li onClick={dropation}>محفظتي</li></Link>
-                            <Link to='/myProfile/courses'><li onClick={dropation}>كورساتي</li></Link>
-                            <Link to='/myProfile/other-courses'><li onClick={dropation}>كورساتي الاخري</li></Link>
-                            <Link to='/'><li onClick={dropation}>تسجيل خروج</li></Link>
+                            <Link to='/'><li onClick={() => {setOpen(!open)}}>منتدي الطلبة</li></Link>
+                            <Link to='/myProfile/code-charge'><li onClick={() => {setOpen(!open)}}>شحن كود السنتر</li></Link>
+                            <Link to='/myProfile/user'><li onClick={() => {setOpen(!open)}}>حسابي</li></Link>
+                            <Link to='/myProfile/wallet'><li onClick={() => {setOpen(!open)}}>محفظتي</li></Link>
+                            <Link to='/myProfile/courses'><li onClick={() => {setOpen(!open)}}>كورساتي</li></Link>
+                            <Link to='/myProfile/other-courses'><li onClick={() => {setOpen(!open)}}>كورساتي الاخري</li></Link>
+                            <Link to='/'><li onClick={() => {setOpen(!open)}}>تسجيل خروج</li></Link>
                         </ul>
                     </div>
                 </div>

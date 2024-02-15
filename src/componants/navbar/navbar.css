@@ -55,7 +55,7 @@
     margin: auto;
     height: 100%;
     gap: 1rem;
-    
+    position: relative;
 }
 
 .nav img {
@@ -93,7 +93,7 @@
     background-color: var(--span2);
 }
 
-.nav .user-dropMenu {
+.nav .user-dropMenu, .notifications {
     position: absolute;
     top: 5rem;
     border-radius: .4rem;
@@ -103,6 +103,13 @@
     overflow: hidden;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     background-color: var(--lightBack);
+}
+
+.nav .notifications {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 2.2rem;
 }
 
 .nav .user-dropMenu ul {
@@ -140,7 +147,11 @@
 }
 
 .nav .user-dropMenu.active {
-    height: 46.7vh;
+    height: 27.02rem;
+}
+
+.nav .notifications.active {
+    height: 2.5rem;
 }
 
 .pointer {
