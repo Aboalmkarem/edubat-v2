@@ -9,6 +9,7 @@
     flex-direction: column;
     background-color: var(--card2);
     color: var(--text);
+    transition: background .15s;
 }
 
 .my-profile .head {

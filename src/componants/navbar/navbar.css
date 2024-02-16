@@ -46,6 +46,7 @@
     z-index: 10;
     background-color: var(--main);
     color: var(--text);
+    transition: background .15s;
 }
 
 .nav {

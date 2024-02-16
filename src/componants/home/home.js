@@ -99,7 +99,7 @@ const Home = () => {
 
     return (
         <div className='home'>
-            <h2>اشتراكاتك</h2>
+            <h2 className='homeh' id='mainh'>اشتراكاتك</h2>
             <h3>كورساتي</h3>
             <div className='cards courses'>
                 {showCards ? ( 
@@ -151,7 +151,7 @@ const Home = () => {
                 <h6>اعرف تفاصيل اكتر عن حسابك</h6>
                 <Link to='/myProfile/user'><button>ملفك الشخصي</button></Link>
             </div>
-            <h1>مواد اديوبات</h1>
+            <h1 id='mainh'>مواد اديوبات</h1>
             <h4>الصف الثالث الثانوي</h4>
             <div className='subjects' ref={subjects}>
                 <ul ref={ul}>
@@ -171,7 +171,7 @@ const Home = () => {
                 </ul>
                 <button ref={showBtn} onClick={show}>عرض المزيد</button>
             </div>
-            <h2 id='h2'>اختار مدرسك</h2>
+            <h2 className='h2' id='mainh'>اختار مدرسك</h2>
             <select>
                 <option>علمي علوم</option>
                 <option>علمي رياضة</option>
