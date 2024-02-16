@@ -1,5 +1,5 @@
 footer {
-    min-height: 75vh;
+    min-height: 40rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,5 +25,18 @@ footer .social.midea {
 }
 
 footer p {
-    padding-top: 3rem;
+    padding: 2rem 2rem 0;
+    text-align: center;
+}
+
+@media only screen and (max-width: 425px) {
+    footer div img {
+        width: 10rem;
+    }
+    footer .hotNum {
+        font-size: 1.7rem;
+    }
+    footer .social.midea {
+        font-size: 2.5rem;
+    }
 }
