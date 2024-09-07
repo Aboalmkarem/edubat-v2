@@ -21,7 +21,7 @@
     padding: 3rem 3rem 3rem;
 }
 
-.home .cards {
+.cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     gap: 2rem;
@@ -29,17 +29,17 @@
     padding-inline: 2rem;
 }
 
-.home .card-img {
+.card-img {
     display: flex;
     overflow: hidden;
     border-radius: .7rem;
 }
 
-.home .card-img img {
+.card-img img {
     min-width: 7rem;
 }
 
-.home .card-content {
+.card-content {
     display: flex;
     min-width: 20rem;
     min-height: max-content;
@@ -56,41 +56,41 @@
     /* text-wrap: balance; */
 }
 
-.home .card-content h2 {
+.card-content h2 {
     padding: 0;
     font-size: 1.4rem;
     color: var(--text);
 }
 
-.home .card-content .row1 {
+.card-content .row1 {
     display: flex;
 }
 
-.home .card-content .col1 {
+.card-content .col1 {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
-.home .card-content .col1 h2 {
+.card-content .col1 h2 {
     padding: .2rem .2rem 1rem;
 }
 
-.home .card-content .col1 hr {
+.card-content .col1 hr {
     border: 1px solid var(--span);
 }
 
-.home .card-content .col1 div {
+.card-content .col1 div {
     padding: .7rem 0 1.7rem;
 }
 
-.home .card-content #hr1 {
+.card-content #hr1 {
     margin-inline: 2.7rem;
     padding-bottom: .7rem;
     border-top: .1px solid #56585c69;
 }
 
-.home .card-content .isSubscribed {
+.card-content .isSubscribed {
     display: flex;
     flex-grow: 0;
     justify-content: center;
@@ -98,7 +98,7 @@
     padding-right: .8rem;
 }
 
-.home .card-content .isSubscribed button {
+.card-content .isSubscribed button {
     pointer-events: none;
     width: 7.5rem;
     height: 4.5rem;
@@ -108,12 +108,12 @@
     background-color: #2fcbff2d;
 }
 
-.home .card-content .row2 {
+.card-content .row2 {
     display: flex;
     align-items: center;
 }
 
-.home .card-content .row2 button {
+.card-content .row2 button {
     width: 7.5rem;
     height: 2rem;
     font-size: .9rem;
@@ -124,13 +124,13 @@
     transition: background .15s;
 }
 
-.home .card-content .row2 button:hover {
+.card-content .row2 button:hover {
     background-color: transparent;
     color: var(--span);
 }
 
 
-.home .card-content .col2 {
+.card-content .col2 {
     flex-grow: 1;
     display: flex;
     flex-direction: column;

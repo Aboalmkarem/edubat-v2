@@ -1,15 +1,10 @@
-import { Link } from 'react-router-dom'
-import './home.css'
-import Card from './card'
-import { useRef, useState } from 'react';
+import './teachers.css'
 import teacher from '../../Assets/teacher1.png'
+import Card from '../home/card';
+import { useState } from 'react';
 
-const Home = () => {
-    
-    let showBtn = useRef()
-    let ul = useRef()
-    let subjects = useRef()
-    let isShowMore = false
+export default function Teachers() {
+
     let showCards = true;
     let [courses, setCourses] = useState( 
         [
@@ -80,28 +75,15 @@ const Home = () => {
         ]
     )
 
-    function show() {
-        if (isShowMore) {
-            isShowMore = false;
-            // console.log(isShowMore)
-            showBtn.current.innerHTML= 'عرض المزيد'
-            ul.current.style.height = '12rem'
-            subjects.current.style.height = 'unset'
-            return
-        } if (!isShowMore) {
-            isShowMore = true
-            // console.log(isShowMore)
-            showBtn.current.innerHTML= 'اخفاء'
-            ul.current.style.height = 'max-content'
-            subjects.current.style.height = 'max-content'
-        }
-    }
-
-    return (
-        <div className='home'>
-            <h2 className='homeh' id='mainh'>اشتراكاتك</h2>
-            <h3>كورساتي</h3>
-            <div className='cards courses'>
+    return(
+        <div className='teachers-courses'>
+            <div className='background'>
+                <h3>محمد صلاح</h3>
+            </div>
+            <div className='teacher-img'>
+                <img src={teacher}></img>
+            </div>
+            <section className='cards courses'>
                 {showCards ? ( 
                     <>
                         {courses.map((course) => {
@@ -122,9 +104,8 @@ const Home = () => {
                 :(
                     <p>error 404</p>
                 )}
-            </div>
-            <h3>كورسات اخري</h3>
-            <div className='cards other-courses'>
+            </section>
+            <section className='cards other-courses'>
                 {showCards ? ( 
                     <>
                         {otherCourses.map((course) => {
@@ -145,51 +126,7 @@ const Home = () => {
                 :(
                     <p>error 404</p>
                 )}
-            </div>
-            <hr id='hr2'></hr>
-            <div className='to-account'>
-                <h6>اعرف تفاصيل اكتر عن حسابك</h6>
-                <Link to='/myProfile/user'><button>ملفك الشخصي</button></Link>
-            </div>
-            <h1 id='mainh'>مواد اديوبات</h1>
-            <h4>الصف الثالث الثانوي</h4>
-            <div className='subjects' ref={subjects}>
-                <ul ref={ul}>
-                    <li><Link to='/'>اللغة العربية</Link></li>
-                    <li><Link to='/'>اللغة الالمانية</Link></li>
-                    <li><Link to='/'>اللغة الفرنسية</Link></li>
-                    <li><Link to='/'>اللغة الانجليزية</Link></li>
-                    <li><Link to='/'>الفلسفة والمنطق</Link></li>
-                    <li><Link to='/'>علم النفس والاجتماع</Link></li>
-                    <li><Link to='/'>الرياضيات</Link></li>
-                    <li><Link to='/'>الجيولوجيا</Link></li>
-                    <li><Link to='/'>الاحياء</Link></li>
-                    <li><Link to='/'>التاريخ</Link></li>
-                    <li><Link to='/'>الجغرافيا</Link></li>
-                    <li><Link to='/'>الكيمياء</Link></li>
-                    <li><Link to='/'>اللغة الايطالية</Link></li>
-                </ul>
-                <button ref={showBtn} onClick={show}>عرض المزيد</button>
-            </div>
-            <h2 className='h2' id='mainh'>اختار مدرسك</h2>
-            <select>
-                <option>علمي علوم</option>
-                <option>علمي رياضة</option>
-                <option>ادبي</option>
-            </select>
-            <div className='teachers'>
-                <Link to='/teachers'>
-                    <div className='teacher-card'>
-                        <div className='teacher-img'><img src={teacher}></img></div>
-                        <div>
-                            <strong>محمد صلاح</strong>
-                            <p>استاذ اللغة العربية</p>
-                        </div>
-                    </div>
-                </Link>
-            </div>
+            </section>
         </div>
     )
 }
-
-export default Home

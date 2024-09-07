@@ -10,6 +10,7 @@ import CCharge from './componants/my-profile/profile-pages/code-charge/cCharge';
 import CCourses from './componants/my-profile/profile-pages/code-courses/cCourses';
 import Wallet from './componants/my-profile/profile-pages/wallet/wallet';
 import Courses from './componants/my-profile/profile-pages/courses/courses';
+import Teachers from './componants/teachers/teachers';
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
             <Route path='exam-resultes' element={<Courses></Courses>}></Route>
             <Route path='homework-resultes' element={<Courses></Courses>}></Route>
           </Route>
+          <Route path='/teachers' element={<Teachers></Teachers>}></Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
